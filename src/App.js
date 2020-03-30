@@ -24,10 +24,19 @@ class App extends Component{
     })
   }
 
+  borrarTarea = (id) => {
+    const nuevasTareas = this.state.tasks.filter(task => task.id !== id)
+    this.setState({tasks: nuevasTareas})
+  }
+
+  checkDone = () => {
+
+  }
+
   render (){
     return <div>
       <TaskForm agregarNuevaTarea={this.agregarTarea}/>
-      <Tasks tasks= {this.state.tasks}/>
+      <Tasks tasks= {this.state.tasks} borraTarea={this.borrarTarea} />
     </div>
  }
 

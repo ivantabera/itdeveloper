@@ -20,8 +20,12 @@ class Task extends Component{
             {task.description} - 
             {task.done} - 
             {task.id}
-              <input type="checkbox"/>
-              <button style={btnDelete}>x</button>
+            <input type="checkbox"/>
+            <button 
+                style={btnDelete} 
+                onClick={this.props.borraTarea.bind(this, task.id)}>
+                    x
+            </button>
         </div>
     }
 }
