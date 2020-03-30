@@ -9,7 +9,8 @@ export default class TaskForm extends Component{
     }
 
     enviar = (event) => {
-        console.log(this.state)
+        //console.log(this.state)
+        this.props.agregarNuevaTarea(this.state.titulo, this.state.descripcion); //cada que se presiona enviar le enviamos el estado con el valor del titulo y la descripcion al momento
         event.preventDefault(); //prevenir que el formulario haga submit y refresque la pagina
     }
 
@@ -21,6 +22,7 @@ export default class TaskForm extends Component{
     }
 
     render(){
+        
         return(
             <form onSubmit={this.enviar}>
 
