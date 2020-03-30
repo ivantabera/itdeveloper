@@ -5,6 +5,7 @@ import tasks from './ejemplo/task.json';
 //Componentes
 import Tasks from './components/Tasks';
 import TaskForm from './components/TaskForm';
+import Posts from './components/Posts';
 
 class App extends Component{
 
@@ -41,8 +42,18 @@ class App extends Component{
 
   render (){
     return <div>
-      <TaskForm agregarNuevaTarea={this.agregarTarea}/>
-      <Tasks tasks= {this.state.tasks} borraTarea={this.borrarTarea} checkDone={this.checkDone} />
+      <TaskForm 
+        agregarNuevaTarea={this.agregarTarea}
+      />
+
+      <Tasks 
+        tasks= {this.state.tasks} 
+        borraTarea={this.borrarTarea} 
+        checkDone={this.checkDone} 
+      />
+
+      <Posts/>
+
     </div>
  }
 
