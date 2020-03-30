@@ -9,6 +9,7 @@ class Tasks extends Component{
             task={task} 
             key={task.id} 
             borraTarea={this.props.borraTarea} 
+            checkDone={this.props.checkDone}
         />)
     }
 }
